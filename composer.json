@@ -1,0 +1,20 @@
+{
+    "name"        : "cent/basecomponents",
+    "version"     : "v0.0.1",
+    "description" : "BaseComponents",
+    "authors"     : [
+        {
+            "name": "Evgeniy Blinov",
+            "email": "evgeniy_blinov@mail.ru"
+        }
+    ],
+    "require": {
+        "php"   : ">=5.4"
+    },
+    "autoload": {
+        "psr-0": { "BaseComponents": "src/" }
+    },
+    "scripts": {
+        "update-version": "ls ./composer.json ./README.md |xargs perl -pe 's/v(\\d+)\\.(\\d+)\\.(\\d+)/\"v$1.$2.\".($3+1)/ge' -i"
+    }
+}
